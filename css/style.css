@@ -1,4 +1,4 @@
-/* https: //www.joshwcomeau.com/css/custom-css-reset/ */
+/* css-reset */
 *,
 *::before,
 *::after {
@@ -7,34 +7,9 @@
   padding: 0;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 input,
-button,
-textarea,
-select {
+button {
   font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
 }
 
 /* CSS START */
@@ -51,6 +26,7 @@ h6 {
 html,
 body {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 

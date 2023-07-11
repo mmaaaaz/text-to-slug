@@ -5,7 +5,7 @@ const copyToClipboard = document.querySelector("#copyToClipboard");
 input.addEventListener("input", () => (output.value = slugify(input.value)));
 copyToClipboard.addEventListener("click", copyOutputToClipboard);
 
-function copyOutputToClipboard() {
+const copyOutputToClipboard = () => {
   if (output.value.length === 0) return;
   if (input.value === output.value) return;
 
@@ -16,7 +16,7 @@ function copyOutputToClipboard() {
       copyToClipboard.innerHTML = "Copy to Clipboard";
     }, 1000);
   });
-}
+};
 
 const slugify = (text) =>
   replaceAccentedCharacters(text)

@@ -1,0 +1,125 @@
+/* https: //www.joshwcomeau.com/css/custom-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* CSS START */
+
+:root {
+  --background: #070811;
+
+  --dark: #000;
+  --light: #fff;
+
+  --button: blue;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: AGENTRED;
+  src: url("../fonts/AGENTRED.woff2");
+}
+
+body {
+  text-align: center;
+  color: var(--light);
+  display: grid;
+  background-color: var(--background);
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  gap: 0.8rem;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-family: AGENTRED;
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+input {
+  width: clamp(250px, 75vw, 43.75rem);
+  background: var(--light);
+  color: var(--dark);
+  margin: 0 auto;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark);
+  display: block;
+}
+
+input::placeholder {
+  color: var(--dark);
+  opacity: 0.5;
+  font-size: small;
+}
+
+button {
+  background: var(--button);
+  width: max-content;
+  margin: 0 auto;
+  color: var(--light);
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark);
+  cursor: pointer;
+}
+
+footer {
+  margin-bottom: 0.5rem;
+  font-size: small;
+}
+
+a {
+  color: coral;
+  text-decoration: none;
+}

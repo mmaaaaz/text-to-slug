@@ -8,11 +8,11 @@
 }
 
 input,
+select,
 button {
   font: inherit;
 }
 
-/* CSS START */
 
 :root {
   --background: #070811;
@@ -20,7 +20,8 @@ button {
   --dark: #000;
   --light: #fff;
 
-  --button: blue;
+  --button-1: blue;
+  --button-2: #ff0073;
 }
 
 html,
@@ -50,7 +51,7 @@ main {
 }
 
 .container {
-  width: 100%;
+  width: clamp(200px, 75vw, 43.75rem);
   display: grid;
   gap: 0.8rem;
 }
@@ -62,11 +63,10 @@ h1 {
   line-height: 2rem; /* 32px */
 }
 
-input {
-  width: clamp(250px, 75vw, 43.75rem);
+input,
+select {
   background: var(--light);
   color: var(--dark);
-  margin: 0 auto;
   padding: 0.8rem 1.2rem;
   border-radius: 0.5rem;
   border: 1px solid var(--dark);
@@ -79,15 +79,30 @@ input::placeholder {
   font-size: small;
 }
 
-button {
-  background: var(--button);
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copyToClipboard,
+#clearInput {
   width: max-content;
-  margin: 0 auto;
   color: var(--light);
-  padding: 0.8rem 1.6rem;
+  padding: 0.6rem 1.6rem;
   border-radius: 0.5rem;
   border: 1px solid var(--dark);
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#copyToClipboard {
+  background: var(--button-1);
+}
+
+#clearInput {
+  background: var(--button-2);
 }
 
 footer {

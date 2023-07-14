@@ -46,6 +46,10 @@
     <h1>Text to Slug</h1>
     <main>
       <div class="container">
+        <select id="separator" name="separator">
+          <option value="-">Using dash (-) as a separator</option>
+          <option value="_">Using underscore (_) as a separator</option>
+        </select>
         <input
           id="rawText"
           name="rawText"
@@ -61,9 +65,10 @@
           placeholder="The slug will appear here"
           disabled
         />
-        <button id="copyToClipboard" class="btn btn-primary">
-          Copy to Clipboard
-        </button>
+        <div class="buttons">
+          <button id="copyToClipboard">Copy to Clipboard</button>
+          <button id="clearInput">Clear</button>
+        </div>
       </div>
     </main>
     <footer>
